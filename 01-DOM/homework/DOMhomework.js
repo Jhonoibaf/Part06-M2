@@ -62,7 +62,7 @@ function buildToDo(todo, index) {
   let toDoText = document.createElement('span');
   toDoText.innerHTML = todo.description; // 'todo' es el objeto de la clase ToDo pasada por parametro en buildToDo
   toDoText.id = index;
-
+  toDoText.addEventListener('click', completeToDo)
   if(todo.complete) toDoText.className = 'completeText';
 
   toDoShell.appendChild(toDoText);
@@ -145,7 +145,9 @@ function completeToDo(event) {
   // DESCOMENTAR LA SIGUIENTE LINEA
   // const index = event.target.id;
   // Tu código acá:
-
+const index = event.target.id;
+toDoItems[index].completeToDo();
+displayToDos();
 }
 
 // Una vez que llegaste a este punto verificá que todos los tests pasen
