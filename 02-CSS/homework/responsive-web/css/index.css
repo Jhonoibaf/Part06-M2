@@ -186,6 +186,11 @@ nav ul a {
   font-family: #23293B;
   color: #454A59;
 }
+@media (max-whidth: 750px) {
+  nav ul {
+    width: 95%;
+  }
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
