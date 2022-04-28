@@ -5,3 +5,19 @@
     justify-content: @justify;
     align-items: @alingn;
 }
+
+.boton(@color , @background, @border){
+    font-size:15px ;
+    font-weight: 200;
+    padding: 10px;
+    color: @color;
+    background-color: @background;
+    border-radius:@border ;
+    width: fit-content;
+    cursor: pointer;
+
+    &:hover{
+        background-color: @color;
+        color: @background;
+    }
+}

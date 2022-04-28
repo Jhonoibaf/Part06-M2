@@ -170,6 +170,7 @@ nav {
 }
 nav h1 {
   font-size: 38px;
+  margin: 20px 0px 10px 0px;
 }
 nav ul {
   width: 45%;
@@ -180,9 +181,10 @@ nav ul {
   align-items: center;
 }
 nav ul a {
-  font-size: 17px;
+  font-size: 15px;
   text-decoration: none;
-  font-family: #454A59;
+  font-family: #23293B;
+  color: #454A59;
 }
 footer {
   color: #22283B;
@@ -199,6 +201,11 @@ footer {
 }
 .home .intro p {
   padding: 0 15px;
+}
+.home .intro img {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 20px;
 }
 .home .music-images {
   display: flex;
@@ -235,6 +242,20 @@ footer {
 }
 .home .actual .actual-text p {
   margin-bottom: 26px;
+}
+.home .actual .actual-text .btn {
+  font-size: 15px ;
+  font-weight: 200;
+  padding: 10px;
+  color: white;
+  background-color: #22283A;
+  border-radius: 15px;
+  width: fit-content;
+  cursor: pointer;
+}
+.home .actual .actual-text .btn:hover {
+  background-color: white;
+  color: #22283A;
 }
 .home .actual .actual-img {
   width: 46%;

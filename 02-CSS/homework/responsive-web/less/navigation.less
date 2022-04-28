@@ -5,15 +5,26 @@ nav{
     border-bottom: 2px solid @nav-border;
     h1{
         font-size: 38px;
+        margin: 20px 0px 10px 0px;
     }
+    background-color: @nav-bg;
+    border-bottom: 2px solid @nav-border;
+
     ul{
         width: 45%;
         padding: 15px;
         .flex(row, space-around, center);
         a{
-            font-size: 17px;
+            font-size: 15px;
             text-decoration: none;
-            font-family: @nav-font;
+            font-family: @ebony-clay;
+            color: @nav-font;
         }
+    }
+    @media @phone {
+        ul{
+            width: 95%;
+        }
+        
     }
 }
