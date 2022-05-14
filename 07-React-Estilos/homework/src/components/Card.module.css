@@ -1,0 +1,10 @@
+.card_weather_info{
+    display: flex;
+    justify-content: space-around;
+}
+
+.close_button {
+    border: none;
+    background-color: none;
+    margin-left: 100%;
+}
