@@ -1,4 +1,4 @@
-const { INCREMENTO, DECREMENTO } = require('../action-types');
+const { INCREMENTO, DECREMENTO, INCREIMP, ASYNC } = require('../action-types');
 
 const initialState = {
   contador: 0
@@ -8,8 +8,35 @@ const initialState = {
 // Recibe el estado de nuestro store, junto con una action creada por nuestro action creator. 
 // ¿Qué tiene que hacer el reducer con el contador de cada caso?
 
-function contador(state = initialState, action) {
-  
+const contador = (state = initialState, action) => {
+  // podemos usar condicionales if o podemos usar switch
+  // el contador debera siempre retornar un objeto, ese objeto va a ser nuestro nuevo estado
+  // contador va a actuar como reducer:
+  console.log(state , action)
+  switch(action.type){
+    case INCREMENTO:
+      return {
+        ...state,
+        contador: state.contador + 1
+    };
+    case DECREMENTO: 
+      return {
+        ...state,
+        contador: state.contador - 1
+    };
+    case INCREIMP:
+      return{
+        ...state,
+        contador: state.contador%2 === 1? state.contador + 2: state.contador
+      };
+    case ASYNC:
+      return{
+        ...state,
+        contador: state.contador +1
+      }
+      default:
+          return state
+      };
 }
 
-module.exports = contador;
+module.exports= contador
